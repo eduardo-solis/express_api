@@ -56,6 +56,19 @@ app.post('/v1/explorers', (req, res) => {
 
 })
 
+// PUT - Actualizar un explorer
+app.put('/v1/explorers/:id', (req, res) => {
+
+    console.log(`Api Explorers PUT requests ${new Date()}`)
+    console.log(`Update explorere with id ${req.params.id}`)
+
+    // Parámetros del explorer
+    const requestBody = req.body
+
+    res.status(200).json({ message : 'Explorer actualizado'})
+
+})
+
 // Con esto inicializamos esta app
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
