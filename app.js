@@ -44,6 +44,17 @@ app.get('/v1/explorers/:id', (req, res) => {
 
 })
 
+// POST - Crear un nuevo explorer
+app.post('/v1/explorers', (req, res) => {
+
+    console.log(`Api Explorers POST requests ${new Date()}`)
+
+    // Parámetros del explorer
+    const requestBody = req.body
+
+    res.status(201).json({ message : 'Explorer creado'})
+
+})
 
 // Con esto inicializamos esta app
 app.listen(port, () => {
